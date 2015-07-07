@@ -1,0 +1,12 @@
+parvo si puskate XAMPP i si puskate MySQL baza, krashtavate bazata da se kazva "data_b1" i nishto drugo ne pipate po nastroikite ot "php_admin" ili "HeidiSQL"
+vtoro si instalirate https://getcomposer.org/ po vreme na instalaciqta mu davate patq do "php.exe"
+sled tova v konzolata pishete teq komandi
+cd C:\xampp\htdocs\amit\SoftUni_LaravelTest // patq do papkata kadeto e proekta se kopira
+composer update
+Sled tova vlizate v proekta prez IDE-to i faila .env (namirase v glanata papka v dolnata chast) promenqte DB_DATABASE=data_b1 da e taka
+php artisan migrate
+php artisan serve
+
+i si otvarqtq v brausara localhost:8000 (ili koito port vi otvori)
+
+

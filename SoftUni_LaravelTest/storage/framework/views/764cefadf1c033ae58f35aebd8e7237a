@@ -1,0 +1,25 @@
+<?php $__env->startSection('css'); ?>
+    <link rel="stylesheet" href=""/> <!-- za CSS -->
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+
+<?php if(count($name)): ?>
+    <nav class="NavigationBar">
+        <ul>
+            <li><a href="/" class="btn btn-primary btn-n" style="margin-top: 25px;">Return</a></li>
+            <li><a href="/auth/logout" class="btn btn-primary btn-lg" style="margin-top: 25px;">Logout</a></li>
+        </ul>
+    </nav>
+    <main>
+    <h1>For this blog we used:</h1>
+    <ol type="1" id="abouth">
+        <?php foreach($name as $n): ?>
+            <li><?php echo e($n); ?></li>
+        <?php endforeach; ?>
+    </ol>
+<?php endif; ?>
+
+    </main>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
